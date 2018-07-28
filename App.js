@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Home from './app/views/HomePage';
-import Playquiz from './app/views/PlayQuiz'
+import Home from './app/views/pages/HomePage';
+import QuizMod from './app/views/components/Quiz/QuizMod'
 import {StackNavigator} from 'react-navigation'
 
 const MyRoutes= StackNavigator({
@@ -8,7 +8,7 @@ const MyRoutes= StackNavigator({
     screen:Home
   },
   QuizRT:{
-    screen:Playquiz
+    screen:QuizMod
   }
 },{
   initialRouteName:'HomeRT',

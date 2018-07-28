@@ -4,7 +4,7 @@ import {
   TouchableWithoutFeedback
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
-export default class Animbutton extends Component {
+export default class OptionButton extends Component {
   constructor(props) {
      super(props);
      this.state ={
