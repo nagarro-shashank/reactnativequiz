@@ -1,0 +1,80 @@
+React Native
+
+
+React Native setup on Windows
+
+1.	Install chocolatey (ref : https://chocolatey.org/install)
+1.	Open cmd as administrator
+2.	Run the following command :
+
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin”
+
+2.	Install node.js
+>> choco install -y nodejs.install python2 jdk8
+
+3.	Install react-native-cli (make sure node.js is added to environment variables PATH)
+>> npm  install –g react-native-cli
+
+4.	Install Visual Studio Code
+
+https://code.visualstudio.com/docs?dv=win
+
+5.	Install android studio
+1.	https://developer.android.com/studio/
+2.	Create emulator supporting marshmallow 6 API level 23 (min) 
+3.	Make sure that platform-tools and tools folders of the Android/sdk/ are added to PATH in the environment variables
+4.	Go to Android/sdk/ tools  and use this command to launch emulator : emulator  –avd “emulator-name “ ( or use android studio to launch an emulator)
+6.	Create a react native app using following command:
+
+>> react-native init –version=”0.49.3” HelloWorld
+
+
+7.	Open the project folder in Visual Studio Code
+1.	Under the android folder create a file with name local.properties and add following lines
+sdk.dir = your android sdk path (no quotes) 
+
+Ex : C:\\ProgramFiles\\Android\sdk(your android sdk path)
+
+8.Open terminal in VSCode(Ctrl+shift+`) and run following commands
+
+>> npm  install
+
+>> react-native run-android
+
+
+
+
+
+Error 1:
+npm install --save react-native@0.55.4
+
+Error 2:
+https://stackoverflow.com/questions/44446523/unable-to-load-script-from-assets-index-android-bundle-on-windows
+
+Error 3:
+yarn remove babel-preset-react-native
+yarn add babel-preset-react-native@2.1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.codementor.io/microsem31/react-native-google-and-facebook-authentication-cohpznykf
